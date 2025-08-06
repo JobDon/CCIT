@@ -9,14 +9,13 @@
     "postinstall": "next build"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.19",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.324.0",
-    "next": "latest",
+    "tailwindcss": "^3.4.3",
     "postcss": "^8.4.31",
-    "react": "latest",
-    "react-dom": "latest",
-    "tailwindcss": "^3.4.3"
+    "autoprefixer": "^10.4.19"
   }
 }
-
