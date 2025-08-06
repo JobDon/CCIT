@@ -38,7 +38,7 @@ const redirects = {
   "General Info": "/about"
 }
 
-export default function LandingPage() {
+export default function Home() {
   const [step, setStep] = useState(0)
   const [history, setHistory] = useState([])
   const [redirectLink, setRedirectLink] = useState(null)
