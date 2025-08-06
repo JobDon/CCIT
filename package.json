@@ -1,0 +1,21 @@
+{
+  "name": "commandcentre-it",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "next build"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.324.0",
+    "next": "latest",
+    "postcss": "^8.4.31",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^3.4.3"
+  }
+}
