@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=8080 next start",
     "postinstall": "next build"
   },
   "dependencies": {
@@ -19,3 +19,4 @@
     "autoprefixer": "^10.4.19"
   }
 }
+
