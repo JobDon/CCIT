@@ -29,12 +29,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Login to Azure
+      - name: Azure login (OIDC)
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7B1B3251BFBF42E48A2390AAECF977FD }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A1273148DC76455D8F532C7C8E20419F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_123B8D70439C4829AE96566A6FD33504 }}
+         client-id: ${{ secrets.AZURE_CLIENT_ID }}
+         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
