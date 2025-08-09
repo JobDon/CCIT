@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write      # required for OIDC
+      id-token: write
       contents: read
 
     steps:
@@ -23,6 +23,12 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
+      - name: Check required secrets exist
+        run: |
+          [ -n "${{ secrets.AZURE_CLIENT_ID }}" ] || (echo "AZURE_CLIENT_ID missing" && exit 1)
+          [ -n "${{ secrets.AZURE_TENANT_ID }}" ] || (echo "AZURE_TENANT_ID missing" && exit 1)
+          [ -n "${{ secrets.AZURE_SUBSCRIPTION_ID }}" ] || (echo "AZURE_SUBSCRIPTION_ID missing" && exit 1)
+
       - name: Clean install
         run: npm ci
 
@@ -32,9 +38,9 @@ jobs:
       - name: Azure login (OIDC)
         uses: azure/login@v2
         with:
-         client-id: ${{ secrets.AZURE_CLIENT_ID }}
-         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
