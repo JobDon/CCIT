@@ -1,13 +1,17 @@
-name: CI build & deploy to Azure App Service
+name: CI build & deploy to Azure App Service (OIDC)
 
 on:
   push:
-    branches: [ main ]       # change if needed
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write      # required for OIDC
+      contents: read
 
     steps:
       - name: Checkout
@@ -25,10 +29,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Deploy the current workspace (which now includes node_modules and .next)
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.660eec6e-1754-4ace-a54a-0f0b6d497dc6 }}
+          tenant-id: ${{ secrets.2a23228b-62df-442b-a01f-7934ff41b634 }}
+          subscription-id: ${{ secrets.95ff9dae-05d7-4591-b1c7-daf42ab581f8 }}
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: commandcentreit          # <-- change this exactly
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          app-name: commandcentreit
           package: .
