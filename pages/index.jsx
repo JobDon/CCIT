@@ -23,7 +23,7 @@ const questions = [
   },
   {
     id: 3,
-    question: "What size business are you?",
+    question: "What size business of are you?",
     options: ["Small", "Medium", "Enterprise"]
   }
 ]
