@@ -1,11 +1,14 @@
 {
+  {
   "name": "commandcentreitnew",
   "version": "1.0.0",
+  "description": "Command Centre IT - Azure App Service Deployment",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "PORT=8080 next start",
+    "start": "next start -p ${PORT:-8080}"
     "postinstall": "next build"
   },
   "dependencies": {
@@ -19,6 +22,7 @@
     "autoprefixer": "^10.4.19"
   }
 }
+
 
 
 
