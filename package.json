@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start -p ${PORT:-8080}"
     "postinstall": "next build"
+     }
   },
   "dependencies": {
     "next": "13.4.19",
@@ -27,6 +28,7 @@
   "license": "MIT"
   }
 }
+
 
 
 
