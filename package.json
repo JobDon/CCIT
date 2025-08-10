@@ -4,11 +4,11 @@
   "description": "Command Centre IT - Azure App Service Deployment",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "next start -p 8080",
+    "start": "node -e \"const p=process.env.PORT||'8080';require('child_process').spawn(require.resolve('next/dist/bin/next'),['start','-p',p],{stdio:'inherit'})\"",
     "postinstall": "next build"
-  },
+},
   "dependencies": {
     "next": "13.4.19",
     "react": "18.2.0",
@@ -24,6 +24,7 @@
   },
   "license": "MIT"
 }
+
 
 
 
