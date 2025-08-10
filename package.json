@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-8080}"
+    "start": "next start -p ${PORT:-8080}",
     "postinstall": "next build"
   },
   "dependencies": {
@@ -23,8 +23,9 @@
     "node": ">=18.x"
   },
   "license": "MIT"
-  
 }
+
+
 
 
 
