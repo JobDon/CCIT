@@ -1,5 +1,4 @@
 {
-  {
   "name": "commandcentreitnew",
   "version": "1.0.0",
   "description": "Command Centre IT - Azure App Service Deployment",
@@ -10,7 +9,6 @@
     "build": "next build",
     "start": "next start -p ${PORT:-8080}"
     "postinstall": "next build"
-     }
   },
   "dependencies": {
     "next": "13.4.19",
@@ -26,8 +24,9 @@
     "node": ">=18.x"
   },
   "license": "MIT"
-  }
+  
 }
+
 
 
 
