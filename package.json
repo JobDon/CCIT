@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "node -e \"const p=process.env.PORT||'8080';require('child_process').spawn(require.resolve('next/dist/bin/next'),['start','-p',p],{stdio:'inherit'})\"",
-    "postinstall": "next build"
+    "start": "node .next/standalone/server.js"
 },
   "dependencies": {
     "next": "13.4.19",
@@ -24,6 +23,7 @@
   },
   "license": "MIT"
 }
+
 
 
 
