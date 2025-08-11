@@ -3,16 +3,6 @@
 @tailwind utilities;
 
 /* App-wide base styles */
-html, body, #__next {
-  height: 100%;
-}
-
-body {
-  @apply bg-neutral-950 text-neutral-100;
-}
-
-/* Smooth fonts */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html, body, #__next { height: 100%; }
+body { @apply bg-neutral-950 text-neutral-100; }  /* remove if you want light */
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
