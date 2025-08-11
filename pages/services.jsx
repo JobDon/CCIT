@@ -1,84 +1,120 @@
+"use client";
 // Services Page – Command Centre IT Ltd.
 
-import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
-import { useState } from "react"
-import { ShieldCheck, Settings, AlertCircle, Search, GraduationCap } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { ShieldCheck, Settings, AlertCircle, Search, GraduationCap } from "lucide-react";
+
+const slugify = (s) =>
+  s
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
 export default function ServicesPage() {
   const sections = [
-    { title: "Managed Security Services", icon: <ShieldCheck className="inline-block w-5 h-5 mr-2 text-blue-400" /> },
-    { title: "Professional & Advisory Services", icon: <Settings className="inline-block w-5 h-5 mr-2 text-green-400" /> },
-    { title: "Offensive Security & Testing", icon: <AlertCircle className="inline-block w-5 h-5 mr-2 text-red-400" /> },
-    { title: "Threat Intelligence & Incident Response", icon: <Search className="inline-block w-5 h-5 mr-2 text-yellow-400" /> },
-    { title: "Training & Awareness", icon: <GraduationCap className="inline-block w-5 h-5 mr-2 text-purple-400" /> },
-  ]
+    { title: "Managed Security Services", icon: <ShieldCheck className="inline-block w-5 h-5 mr-2 text-blue-400" aria-hidden="true" /> },
+    { title: "Professional & Advisory Services", icon: <Settings className="inline-block w-5 h-5 mr-2 text-green-400" aria-hidden="true" /> },
+    { title: "Offensive Security & Testing", icon: <AlertCircle className="inline-block w-5 h-5 mr-2 text-red-400" aria-hidden="true" /> },
+    { title: "Threat Intelligence & Incident Response", icon: <Search className="inline-block w-5 h-5 mr-2 text-yellow-400" aria-hidden="true" /> },
+    { title: "Training & Awareness", icon: <GraduationCap className="inline-block w-5 h-5 mr-2 text-purple-400" aria-hidden="true" /> },
+  ];
 
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen flex scroll-smooth">
-     {/* Header with Logo */}
-      <header className="flex items-center gap-4 p-4 bg-gray-900 border-b border-gray-800">
-        <a href="/">
-          <img src="/public/logo.png" alt="Logo" className="h-10 w-auto sm:h-12" />
-        </a>
-        <h1 className="text-xl font-semibold">Contact Us</h1>
+    <div className="bg-gray-950 text-white min-h-screen flex flex-col scroll-smooth">
+      {/* Header with Logo */}
+      <header className="relative flex items-center gap-4 p-4 bg-gray-900 border-b border-gray-800">
+        <button
+          className="lg:hidden bg-gray-800 text-white px-4 py-2 rounded shadow"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          aria-expanded={sidebarOpen}
+          aria-controls="services-sidebar"
+        >
+          {sidebarOpen ? "Close Menu" : "Menu"}
+        </button>
+
+        <Link href="/" className="inline-flex items-center">
+          <Image src="/logo.png" alt="Command Centre IT" width={120} height={40} />
+        </Link>
+
+        <h1 className="text-xl font-semibold">Our Services</h1>
       </header>
-      {/* Sidebar */}
-      <aside className={`fixed z-20 lg:static bg-gray-950 lg:bg-transparent w-64 px-6 py-8 border-r border-gray-800 lg:block transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
-        <h2 className="text-xl font-bold mb-6">Navigate Services</h2>
-        <ul className="space-y-4">
-          {sections.map(({ title, icon }, idx) => (
-            <li key={idx}>
-              <a href={`#${title.replace(/\s+/g, '-')}`} className="text-blue-400 hover:text-blue-300 flex items-center" onClick={() => setSidebarOpen(false)}>
-                {icon} {title}
-              </a>
-            </li>
+
+      <div className="flex">
+        {/* Sidebar */}
+        <aside
+          id="services-sidebar"
+          className={`fixed z-20 lg:static bg-gray-950 lg:bg-transparent w-64 px-6 py-8 border-r border-gray-800 lg:block transition-transform duration-300 ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:translate-x-0`}
+        >
+          <h2 className="text-xl font-bold mb-6">Navigate Services</h2>
+          <ul className="space-y-4">
+            {sections.map(({ title, icon }) => (
+              <li key={title}>
+                <a
+                  href={`#${slugify(title)}`}
+                  className="text-blue-400 hover:text-blue-300 flex items-center"
+                  onClick={() => setSidebarOpen(false)}
+                >
+                  {icon} {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 px-4 py-12 max-w-5xl mx-auto lg:ml-0">
+          <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto">
+            At Command Centre IT Ltd., we provide a full spectrum of cybersecurity services designed to protect your organization against evolving threats.
+          </p>
+
+          {sections.map(({ title, icon }) => (
+            <Section
+              key={title}
+              id={slugify(title)}
+              title={title}
+              icon={icon}
+              items={getSectionItems(title)}
+            />
           ))}
-        </ul>
-      </aside>
 
-      {/* Toggle button */}
-      <button
-        className="fixed top-4 left-4 z-30 lg:hidden bg-gray-800 text-white px-4 py-2 rounded shadow"
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        {sidebarOpen ? 'Close Menu' : 'Menu'}
-      </button>
-
-      {/* Main Content */}
-      <div className="flex-1 px-4 py-12 max-w-5xl mx-auto space-y-12">
-        <h1 className="text-4xl font-bold text-center">Our Services</h1>
-        <p className="text-lg text-gray-300 text-center max-w-3xl mx-auto">
-          At Command Centre IT Ltd., we provide a full spectrum of cybersecurity services designed to protect your organization against evolving threats.
-        </p>
-
-        {sections.map(({ title, icon }) => (
-          <Section
-            key={title}
-            id={title.replace(/\s+/g, '-')}
-            title={title}
-            icon={icon}
-            items={getSectionItems(title)}
-          />
-        ))}
-
-        <div className="text-center mt-12 text-gray-400">
-          <p>Need tailored support? <a href="/contact" className="underline text-blue-500 hover:text-blue-400">Contact us</a> or email <a href="mailto:contact@commandcentre.it" className="underline text-blue-500 hover:text-blue-400">contact@commandcentre.it</a></p>
-        </div>
+          <div className="text-center mt-12 text-gray-400">
+            <p>
+              Need tailored support?{" "}
+              <Link href="/contact" className="underline text-blue-500 hover:text-blue-400">
+                Contact us
+              </Link>{" "}
+              or email{" "}
+              <a
+                href="mailto:contact@commandcentre.it"
+                className="underline text-blue-500 hover:text-blue-400"
+              >
+                contact@commandcentre.it
+              </a>
+            </p>
+          </div>
+        </main>
       </div>
     </div>
-  )
+  );
 }
 
 function Section({ id, title, icon, items }) {
   return (
-    <section id={id} className="scroll-mt-24">
-      <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2 flex items-center">{icon} {title}</h2>
+    <section id={id} className="scroll-mt-24 mt-12">
+      <h2 className="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2 flex items-center">
+        {icon} {title}
+      </h2>
       <div className="grid md:grid-cols-2 gap-6">
-        {items.map(([name, desc], i) => (
-          <Card key={i} className="bg-gray-900 border border-gray-700">
+        {items.map(([name, desc]) => (
+          <Card key={name} className="bg-gray-900 border border-gray-700">
             <CardContent className="p-4">
               <h3 className="text-lg font-bold text-white mb-2">{name}</h3>
               <p className="text-sm text-gray-300">{desc}</p>
@@ -87,9 +123,10 @@ function Section({ id, title, icon, items }) {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
+// original data map unchanged
 function getSectionItems(title) {
   const sectionsMap = {
     "Managed Security Services": [
@@ -126,6 +163,6 @@ function getSectionItems(title) {
       ["Security Awareness Training", "Interactive and engaging training modules designed to help employees recognize and respond to common threats like phishing and social engineering."],
       ["Technical Training Workshops", "Hands-on sessions covering key security skills such as ethical hacking, malware analysis, and secure coding."]
     ]
-  }
-  return sectionsMap[title] || []
+  };
+  return sectionsMap[title] || [];
 }
