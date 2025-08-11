@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+      
       - name: Azure login (OIDC)
         uses: azure/login@v2
         with:
@@ -23,13 +23,6 @@ jobs:
 
       - run: npm install
       - run: npm run build
-      
-      - name: Azure login (OIDC)
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{secrets.AZURE_SUBSCRIPTION_ID }}
 
       # Deploy the repo (which now includes .next/standalone and .next/static)
       - uses: azure/webapps-deploy@v3
@@ -37,5 +30,6 @@ jobs:
           app-name: commandcentreitnew            # <-- your app name
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .
+
 
 
