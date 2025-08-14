@@ -7,7 +7,10 @@ export default function AboutPage() {
           <img src="/logo.png" alt="Logo" className="h-10 w-auto sm:h-12" />
         </a>
         <h1 className="text-xl font-semibold">Contact Us</h1>
+      import Image from 'next/image'
+      <Image src="/logo.png" alt="Logo" width={160} height={40} priority />
       </header>
+      
       <h1 className="text-4xl font-bold mb-6">About Command Centre IT</h1>
       <p className="text-gray-300 mb-4">
         Founded in 2022, Command Centre IT Ltd. was built to meet the growing demand for advanced cyber defence
