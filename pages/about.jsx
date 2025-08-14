@@ -4,7 +4,15 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-950 text-white p-8">
       <header className="flex items-center gap-4 p-4 bg-gray-900 border-b border-gray-800">
       <h1 className="text-xl font-semibold">Contact Us</h1>
-      <Image src="/logo.png" alt="Logo" width={160} height={40} priority />
+      <a href="/">
+  <Image
+    src="/logo.png"
+    alt="Logo"
+    width={160}
+    height={40}
+    priority
+  />
+</a>
       </header>
       
       <h1 className="text-4xl font-bold mb-6">About Command Centre IT</h1>
