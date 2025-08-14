@@ -1,10 +1,10 @@
-// /pages/about.js
+import Image from 'next/image';
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-8">
       <header className="flex items-center gap-4 p-4 bg-gray-900 border-b border-gray-800">
         <a href="/">
-          <img src="/logo.png" alt="Logo" className="h-10 w-auto sm:h-12" />
+          <img src="/logo.png" alt="Logo" className="h-160 w-auto sm:h-40" />
         </a>
         <h1 className="text-xl font-semibold">Contact Us</h1>
       import Image from 'next/image'
