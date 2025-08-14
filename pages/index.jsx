@@ -59,7 +59,7 @@ export default function Home() {
       {/* Header with Logo */}
       <header className="flex items-center gap-4 p-4 w-full max-w-6xl">
         <a href="/">
-          <img src="/public/logo.png" alt="Logo" className="h-10 w-auto sm:h-12" />
+          <img src="/logo.png" alt="Logo" className="h-10 w-auto sm:h-12" />
         </a>
       </header>
 
