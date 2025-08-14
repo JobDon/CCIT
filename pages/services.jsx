@@ -39,7 +39,7 @@ export default function ServicesPage() {
         </button>
 
         <Link href="/" className="inline-flex items-center">
-          <Image src="/logo.png" alt="Command Centre IT" width={120} height={40} />
+          <Image src="/logo.svg" alt="Command Centre IT" width={120} height={40} />
         </Link>
 
         <h1 className="text-xl font-semibold">Our Services</h1>
