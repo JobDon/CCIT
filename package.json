@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 8080",
-    "build": "next build",
-    "start": "node .next/standalone/server.js"
+    "build": "next build && next export"
+  }
+
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -24,3 +25,4 @@
   },
   "license": "MIT"
 }
+
