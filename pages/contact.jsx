@@ -51,10 +51,11 @@ export default function ContactPage() {
           {/* Left Column */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-wide leading-tight uppercase">
-              Send us an
+              Send us a
               <br />
-              encrypted message.
+              message.
               <br />
+              
               We will call you back.
             </h1>
             <div className="mt-10 space-y-6 text-gray-300">
@@ -78,7 +79,11 @@ export default function ContactPage() {
                 <p className="text-sm mt-1 text-gray-400">
                   Our founder has over 25 years in building robust cyber defences,
                   For SME's enterprise alike, with experience in government and banking.
-                </p>
+              </div>
+              <p className="text-xs text-gray-500 pt-2">
+                All messages are encryped.
+              </p>
+            </div>
           </div>
 
           {/* Right Column - Form */}
@@ -91,7 +96,7 @@ export default function ContactPage() {
                     Message sent successfully!
                   </p>
                   <p className="text-white text-sm mt-1">
-                    We will get back to you within 15 minutes for emergencies and 24 hours for non emergencies.
+                    We will get back to you within 15 minutes during business hours for emergencies and 1 business day for non emergencies.
                   </p>
                 </div>
               )}
@@ -137,7 +142,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject <span className="text-gray-500">(If you have been hacked, write "emergency")</span>
+                    Subject <span className="text-gray-500">(If you have been hacked, write "Emergency")</span>
                   </label>
                   <input
                     type="text"
