@@ -79,6 +79,7 @@ export default function ContactPage() {
                 <p className="text-sm mt-1 text-gray-400">
                   Our founder has over 25 years in building robust cyber defences,
                   For SME's enterprise alike, with experience in government and banking.
+                </p>
               </div>
               <p className="text-xs text-gray-500 pt-2">
                 All messages are encryped.
