@@ -51,9 +51,9 @@ export default function ContactPage() {
           {/* Left Column */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-wide leading-tight uppercase">
-              Send us a message, 
+              Send us an
               <br />
-              messages are encrypted.
+              encrypted message.
               <br />
               We will call you back.
             </h1>
