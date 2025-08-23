@@ -113,7 +113,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Full name
+                    Name
                   </label>
                   <input
                     type="text"
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Subject <span className="text-gray-500">(optional)</span>
+                    Subject <span className="text-gray-500">(If you have been hacked, write "emergency")</span>
                   </label>
                   <input
                     type="text"
@@ -165,7 +165,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={6}
                     className="w-full px-4 py-3 bg-transparent border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1C0AA3] resize-none"
-                    placeholder="Tell us about your cybersecurity needs..."
+                    placeholder="Describe your issue or enquiry..."
                     required
                   />
                 </div>
