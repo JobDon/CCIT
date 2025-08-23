@@ -53,7 +53,7 @@ export default function ContactPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-wide leading-tight uppercase">
               Send us a
               <br />
-              message.
+              message and
               <br />
               
               We will call you back.
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <p className="font-medium text-white">Professional Security Services</p>
                 <p className="text-sm mt-1 text-gray-400">
                   Our founder has over 25 years in building robust cyber defences,
-                  For SME's enterprise alike, with experience in government and banking.
+                  For SME's and enterprises alike, we have experience in government and banking.
                 </p>
               </div>
               <p className="text-xs text-gray-500 pt-2">
