@@ -51,11 +51,11 @@ export default function ContactPage() {
           {/* Left Column */}
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white tracking-wide leading-tight uppercase">
-              Get your
+              Send us a message, 
               <br />
-              personalized
+              messages are encrypted.
               <br />
-              demo
+              We will call you back.
             </h1>
             <div className="mt-10 space-y-6 text-gray-300">
               <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                     Message sent successfully!
                   </p>
                   <p className="text-white text-sm mt-1">
-                    We&apos;ll get back to you within 24 hours.
+                    We willll get back to you within 15 minutes for emergencies and 24 hours for non emergencies.
                   </p>
                 </div>
               )}
