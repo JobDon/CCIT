@@ -151,7 +151,7 @@ export default function ContactPage() {
                     value={form.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-transparent border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1C0AA3]"
-                    placeholder="What&apos;s this about?"
+                    placeholder="Choose a service or describe the enquiry?"
                   />
                 </div>
 
