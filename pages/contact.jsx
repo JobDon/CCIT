@@ -55,7 +55,6 @@ export default function ContactPage() {
               <br />
               message and
               <br />
-              
               We will call you back.
             </h1>
             <div className="mt-10 space-y-6 text-gray-300">
@@ -77,8 +76,8 @@ export default function ContactPage() {
               <div>
                 <p className="font-medium text-white">Professional Security Services</p>
                 <p className="text-sm mt-1 text-gray-400">
-                  Our founder has over 25 years in building robust cyber defences,
-                  For SME's and enterprises alike, we have experience in government and banking.
+                  Our founder has over 25 years in building robust cyber defences an protecting 
+                  SME's and enterprises alike against cyber threats. We have experience in government and banking.
                 </p>
               </div>
               <p className="text-xs text-gray-500 pt-2">
@@ -151,7 +150,7 @@ export default function ContactPage() {
                     value={form.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-transparent border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1C0AA3]"
-                    placeholder="Choose a service or describe the enquiry?"
+                    placeholder="Choose a service"
                   />
                 </div>
 
