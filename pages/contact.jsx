@@ -59,32 +59,26 @@ export default function ContactPage() {
             </h1>
             <div className="mt-10 space-y-6 text-gray-300">
               <div>
-                <p className="font-medium text-white">Actionable visibility</p>
+                <p className="font-medium text-white">Security Assessment</p>
                 <p className="text-sm mt-1 text-gray-400">
-                  See how Command Centre IT uncovers data leaks, dark‑web
-                  mentions, and exposed assets — all mapped to business impact.
+                  At Command Centre IT we provide free security assessments 
+                  for new customers, get to know your risks and mitigate.
                 </p>
               </div>
               <div>
-                <p className="font-medium text-white">Tailored walkthrough</p>
+                <p className="font-medium text-white">Managed Security Service</p>
                 <p className="text-sm mt-1 text-gray-400">
-                  We focus the demo on your environment, use cases, and current
-                  risks — no generic slides, just the workflow you’ll actually
-                  use.
+                  Command Centre is a managed detection and response service
+                  we monitor your IT estate 24/7 and provide automated response
+                  to threats, outsource your security operations now.
                 </p>
               </div>
               <div>
-                <p className="font-medium text-white">Clear next steps</p>
+                <p className="font-medium text-white">Professional Security Services</p>
                 <p className="text-sm mt-1 text-gray-400">
-                  Leave with a short remediation plan, integration guidance, and
-                  timelines so you can move from insight to action quickly.
+                  Our founder has over 25 years in building robust cyber defences,
+                  For SME's enterprise alike, with experience in government and banking.
                 </p>
-              </div>
-              <p className="text-xs text-gray-500 pt-2">
-                No pressure. 30–45 minutes. We can record the session on
-                request.
-              </p>
-            </div>
           </div>
 
           {/* Right Column - Form */}
@@ -97,7 +91,7 @@ export default function ContactPage() {
                     Message sent successfully!
                   </p>
                   <p className="text-white text-sm mt-1">
-                    We willll get back to you within 15 minutes for emergencies and 24 hours for non emergencies.
+                    We will get back to you within 15 minutes for emergencies and 24 hours for non emergencies.
                   </p>
                 </div>
               )}
