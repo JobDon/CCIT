@@ -6,7 +6,7 @@ import Navbar from "@/components/ui/navbar";
 const questions = [
   {
     id: 1,
-    question: "Are you experiencing a live incident?",
+    question: "Have you been hacked and need urgent assistance?",
     options: ["Yes", "No"],
   },
   {
