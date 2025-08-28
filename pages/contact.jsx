@@ -59,25 +59,23 @@ export default function ContactPage() {
             </h1>
             <div className="mt-10 space-y-6 text-gray-300">
               <div>
-                <p className="font-medium text-white">Security Assessment</p>
+                <p className="font-medium text-white">Managed Security Services</p>
                 <p className="text-sm mt-1 text-gray-400">
-                  At Command Centre IT we provide free security assessments 
-                  for new customers, get to know your risks and mitigate.
+                  Command Centre IT can manage your security operations, attack detections, preventions and responses, with 24/7 monitoring.
                 </p>
               </div>
               <div>
-                <p className="font-medium text-white">Managed Security Service</p>
-                <p className="text-sm mt-1 text-gray-400">
-                  Command Centre is a managed detection and response service
-                  we monitor your IT estate 24/7 and provide automated response
-                  to threats, outsource your security operations now.
-                </p>
-              </div>
-              <div>
-                <p className="font-medium text-white">Professional Security Services</p>
+                <p className="font-medium text-white">Professional & Advisory Services</p>
                 <p className="text-sm mt-1 text-gray-400">
                   Our founder has over 25 years in building robust cyber defences an protecting 
-                  SME's and enterprises alike against cyber threats. We have experience in government and banking.
+                  SME's and enterprises alike against cyber threats. 
+                  We have experience in government and banking, we are security subject matter experts.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium text-white">Training & Awareness</p>
+                <p className="text-sm mt-1 text-gray-400">
+                  At Command Centre IT we provide cybersecurity training and threat intelligence for your company, good cyber defences rely on informed users.
                 </p>
               </div>
               <p className="text-xs text-gray-500 pt-2">
