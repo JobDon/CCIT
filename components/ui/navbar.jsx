@@ -11,13 +11,8 @@ const servicesDropdownItems = [
     icon: "🛡️",
     items: [
       {
-        title: "Managed Firewall & Network Security",
-        href: "/services/managed-security-services#firewall",
-        available: true,
-      },
-      {
-        title: "Endpoint Detection & Response (EDR)",
-        href: "/services/managed-security-services#edr",
+        title: "Managed Security Operations",
+        href: "/services/managed-security-services#soc",
         available: true,
       },
       {
@@ -26,18 +21,13 @@ const servicesDropdownItems = [
         available: true,
       },
       {
-        title: "Managed SOAR",
-        href: "/services/managed-security-services#soar",
+        title: "Managed Incident Response",
+        href: "/services/managed-security-services#mir",
         available: true,
       },
       {
-        title: "Cloud Security Management",
-        href: "/services/managed-security-services#cloud",
-        available: true,
-      },
-      {
-        title: "Managed Vulnerability Intelligence",
-        href: "/services/managed-security-services#vulnerability",
+        title: "Managed Identity & Access Security",
+        href: "/services/managed-security-services#mir",
         available: true,
       },
     ],
@@ -49,13 +39,13 @@ const servicesDropdownItems = [
     icon: "👥",
     items: [
       {
-        title: "Identity & Access Management",
-        href: "/services#iam",
+        title: "Defence Architecture & Engineering",
+        href: "/services#design",
         available: true,
       },
       {
-        title: "Defence Architecture",
-        href: "/services#architecture",
+        title: "Identity & Access Management",
+        href: "/services#iam",
         available: true,
       },
       {
@@ -64,74 +54,8 @@ const servicesDropdownItems = [
         available: true,
       },
       {
-        title: "Security Maturity Assessments",
+        title: "Security Assessments",
         href: "/services#assessments",
-        available: true,
-      },
-      {
-        title: "Cloud Security Assessments",
-        href: "/services#cloud-assessments",
-        available: true,
-      },
-      {
-        title: "Subject Matter Experts",
-        href: "/services#sme",
-        available: true,
-      },
-    ],
-  },
-  {
-    category: "Offensive Security & Testing",
-    available: true,
-    href: "/services#offensive-security-testing",
-    icon: "🎯",
-    items: [
-      {
-        title: "Penetration Testing",
-        href: "/services#pentesting",
-        available: true,
-      },
-      {
-        title: "Red Team Assessments",
-        href: "/services#redteam",
-        available: true,
-      },
-      {
-        title: "Infrastructure Assessments",
-        href: "/services#infrastructure",
-        available: true,
-      },
-      {
-        title: "Compromise Assessments",
-        href: "/services#compromise",
-        available: true,
-      },
-    ],
-  },
-  {
-    category: "Threat Intelligence & Incident Response",
-    available: true,
-    href: "/services#threat-intelligence-incident-response",
-    icon: "🔍",
-    items: [
-      {
-        title: "Threat Intelligence Services",
-        href: "/services#threat-intel",
-        available: true,
-      },
-      {
-        title: "Cybersecurity Incident Response",
-        href: "/services#incident-response",
-        available: true,
-      },
-      {
-        title: "Security Operations Center (SOC) Services",
-        href: "/services#soc",
-        available: true,
-      },
-      {
-        title: "Malware Analysis & Forensics",
-        href: "/services#malware",
         available: true,
       },
     ],
@@ -150,11 +74,6 @@ const servicesDropdownItems = [
       {
         title: "Technical Training Workshops",
         href: "/services#technical",
-        available: true,
-      },
-      {
-        title: "Executive Security Briefings",
-        href: "/services#executive",
         available: true,
       },
     ],
