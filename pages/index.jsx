@@ -84,7 +84,7 @@ export default function Home() {
       <section className="relative">
         {/* Full-bleed background image (below content only) */}
         <Image
-          src="/backgrounds/indexbackground.jpeg"
+          src="/backgrounds/indexbackground.jpg"
           alt=""
           fill
           priority
