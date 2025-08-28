@@ -95,18 +95,6 @@ export default function Home() {
         {/* Dark gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
 
-        {/* Faint grid texture */}
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-            backgroundPosition: "0 0, 0 0",
-          }}
-        />
-
         {/* Optional subtle brand glow */}
         <div
           aria-hidden
