@@ -82,14 +82,14 @@ export default function Home() {
 
       {/* Backgrounded hero section begins AFTER the navbar */}
       <section className="relative min-h-[100dvh]">
-        {/* Full-bleed background image (below content only) */}
+        {/* Full-bleed background image */}
         <Image
           src="/backgrounds/indexbackground.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-40 pointer-events-none select-none"
+          className="object-cover opacity-60 pointer-events-none select-none"
         />
 
         {/* Dark gradient overlay for readability */}
