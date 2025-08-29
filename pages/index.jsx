@@ -89,7 +89,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-60 pointer-events-none select-none"
+          className="object-cover opacity-70 pointer-events-none select-none"
         />
 
         {/* Dark gradient overlay for readability */}
