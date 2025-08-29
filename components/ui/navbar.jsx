@@ -131,8 +131,8 @@ export default function Navbar() {
               <Image
                 src="/logonew.jpg"
                 alt="Command Centre IT"
-                width={200}
-                height={40}
+                width={250}
+                height={50}
                 className="hover:opacity-90 transition-opacity duration-200"
               />
             </Link>
