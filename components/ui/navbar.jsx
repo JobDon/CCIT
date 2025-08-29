@@ -129,7 +129,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
               <Image
-                src="/logo.png"
+                src="/logonew.png"
                 alt="Command Centre IT"
                 width={200}
                 height={200}
