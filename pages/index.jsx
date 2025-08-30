@@ -7,7 +7,7 @@ import Navbar from "@/components/ui/navbar";
 const questions = [
   {
     id: 1,
-    question: "Have you been hacked and need urgent assistance?",
+    question: "Have you experienced a cyber attack and require urgent assistance?",
     options: ["Yes", "No"],
   },
   {
